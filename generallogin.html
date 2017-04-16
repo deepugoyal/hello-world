@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="UTF-8">
+	<title>Login - EHA</title>
+	<link rel="stylesheet" href="css/general.css" type="text/css">
+    <style type="text/css">
+        .style1
+        {
+            width: 180px;
+        }
+    </style>
+    </head>
+<body>
+    <form method="post" action="login.php">
+	
+		<div id="body">
+       <div id="header">
+		<a href="GeneralHome.aspx" class="logo"><img src="images/logo.png" alt=""></a>
+<ul>
+			<li class="selected">
+				<a href="GeneralHome.html">Home</a>
+			</li>
+		<li>
+				<a href="AboutUs.html">About Us</a>
+			</li>
+			<li>
+				<a href="services.html">Services</a>
+			</li>
+			<li>
+				<a href="location.html">Our Locations</a>
+			</li>
+			<li>
+				<a href="blog.html">Blog</a>
+			</li>
+			<li>
+				<a href="generallogin.html">Login</a>
+			</li>
+		</ul>	</div>
+      
+		<div id="blog">
+			<div>
+				<div>
+					<div class="figure">
+                        <img src="images/vaccines.png" alt="">
+					</div>
+					<div class="article">
+						<h3>
+                            E-Healthcare makes it easy to find what matters most in the World</h3>
+						<p>
+                            You get more out of the web, you get more out of the life.............
+                        </p>
+                        <p>
+                            The ease and simplicity of EHA, available for everyone across the world.........</p>
+					</div>
+				</div>
+			</div>
+		</div>
+      
+        <div id="sidebar">
+			<div class="archive">
+				<h3>login </h3>
+				<ul>
+             
+					 <table cellpadding="5" style="width: 271px; height: 245px;">
+                 <tr>
+                 <td>
+                     Email-Id : 
+                 </td>
+                 <td class="style1">
+              <input type="email" name="email" Placeholder="Email-Id..." required/>
+                 </td></tr>
+                 <tr>
+                 <td>
+                     Password :</td>
+                 <td class="style1">
+              <input type="password" name="pass" Placeholder="Password..." required/>
+                 </td></tr>
+                 <tr>
+                 <td>
+                     &nbsp;</td>
+                 <td class="style1">
+                     <asp:Literal ID="Literal4" runat="server"></asp:Literal>
+                     </td></tr>
+                 <tr>
+                 <td>
+                     &nbsp;</td>
+                 <td class="style1">
+                     <input type="image" Height="38px" Width="132px" 
+                         src="images/login-button.png">
+                 </td></tr>
+                 <tr>
+                 <td>
+                     &nbsp;</td>
+                 <td class="style1">
+                     <input type="image" Height="29px" 
+                         src="images/button-forgotpassword.png" Width="161px" />
+                 </td></tr>
+                 <tr>
+                 <td>
+                     &nbsp;</td>
+                 <td class="style1">
+                    <a href="signup.php">Sign-Up For Patient Account</a>
+                 </td></tr>
+                 <tr>
+                 <td>
+                     &nbsp;</td>
+                 <td class="style1">
+                    <a href="AdvisorRegistration.php">Sign-Up For Advisor Account</a>
+                 </td></tr>
+                 </table> 
+                </ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p>
+				<span>2014 © E-Healthcare Advisor.</span>Designed By :&nbsp;
+			</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+			<ul>
+				<li id="facebook">
+					<a href="http://freewebsitetemplates.com/go/facebook/">facebook</a>
+				</li>
+				<li id="twitter">
+					<a href="http://freewebsitetemplates.com/go/twitter/">twitter</a>
+				</li>
+				<li id="googleplus">
+					<a href="http://freewebsitetemplates.com/go/googleplus/">googleplus</a>
+				</li>
+				<li id="rss">
+					<a href="#" >rss</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

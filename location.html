@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta charset="UTF-8">
+	<title>Location - EHA</title>
+
+	<link rel="stylesheet" href="css/location.css" type="text/css">
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+	<form id="form1" runat="server">
+	<div id="header">
+		<a href="GeneralHome.aspx" class="logo"><img src="images/logo.png" alt=""></a>
+<ul>
+			<li class="selected">
+				<a href="GeneralHome.html">Home</a>
+			</li>
+		<li>
+				<a href="AboutUs.html">About Us</a>
+			</li>
+			<li>
+				<a href="services.html">Services</a>
+			</li>
+			<li>
+				<a href="location.html">Our Locations</a>
+			</li>
+			<li>
+				<a href="blog.html">Blog</a>
+			</li>
+			<li>
+				<a href="generallogin.html">Login</a>
+			</li>
+		</ul>	</div>
+	<div id="body">
+		<div class="content">
+			<img src="images/lobby1.jpg" alt=""/>
+			<h2>Our Locations</h2>
+			<div class="section">
+				<div>
+					
+				    <table class="style1" style="font-family: 'Lucida Sans Unicode'">
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="text-align: center">
+                                <asp:GridView ID="GridView1" runat="server" BackColor="White" align="center" 
+                                    BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" 
+                                    AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="784px">
+                                    <Columns>
+                                        <asp:BoundField DataField="clinic_name" HeaderText="Clinic Name" 
+                                            SortExpression="clinic_name" />
+                                        <asp:BoundField DataField="clinic_addr" HeaderText="Clinic Address" 
+                                            SortExpression="clinic_addr" />
+                                        <asp:BoundField DataField="clinic_con_no" HeaderText="Clinic Contact Number" 
+                                            SortExpression="clinic_con_no" />
+                                        <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
+                                        <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+                                    </Columns>
+                                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                                    <RowStyle ForeColor="#000066" />
+                                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                    <SortedDescendingHeaderStyle BackColor="#00547E" />
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:EHADatabase %>" 
+                                    SelectCommand="SELECT [clinic_name], [clinic_addr], [clinic_con_no], [city], [state] FROM [advisor_regis] WHERE ([v_status] = @v_status)">
+                                    <SelectParameters>
+                                        <asp:Parameter DefaultValue="active" Name="v_status" Type="String" />
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<p>
+				<span>2014 © E-Healthcare Advisor.</span>Designed By :&nbsp;
+			</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+			<ul>
+				<li id="facebook">
+					<a href="http://freewebsitetemplates.com/go/facebook/">facebook</a>
+				</li>
+				<li id="twitter">
+					<a href="http://freewebsitetemplates.com/go/twitter/">twitter</a>
+				</li>
+				<li id="googleplus">
+					<a href="http://freewebsitetemplates.com/go/googleplus/">googleplus</a>
+				</li>
+				<li id="rss">
+					<a href="#" >rss</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    </form>
+</body>
+</html>
